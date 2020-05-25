@@ -1,7 +1,37 @@
-$font-family: 'Open Sans', sans-serif;
-$font--light: 300;
-$font--regular: 400;
-$font--bold: 700;
+$font-family-primary: 'Rubik', sans-serif;
+$font-family-alt: 'Lato', sans-serif;
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-black: 900;
 
 $color-white: #ffffff;
+$color-white--dirty: #fcfcfc;
 $color-black: #000000;
+$color-black--light: #262532;
+$color-gray--lighten: #979797;
+$color-gray--alt: #707070;
+$color-gray: #e1dfdf;
+$color-red: #d71f1c;
+$color-red--dark: #c92324;
+$color-red--darker: #a71b1c;
+
+$text-color: $color-black;
+$body-background: $color-white--dirty;
+
+$mobile-breakpoint: 1024px;
+
+:root {
+  --content-padding: 1em;
+  --font-size-base: 1.6rem;
+
+  @media screen and (min-width: 1024px) {
+    --font-size-base: 1rem;
+    --content-padding: 2.24em;
+  }
+
+  @media screen and (min-width: 1280px) {
+    --font-size-base: 0.84rem;
+  }
+}

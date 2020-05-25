@@ -32,3 +32,40 @@
     @warn '`#{$beforeAfter}` - to nie poprawna wartosc, dopuszczalne wartosci to "before" lub "after"';
   }
 }
+
+@mixin content {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-left: var(--content-padding);
+  padding-right: var(--content-padding);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin content--boxed {
+  max-width: 110em;
+}
+
+@mixin content--full {
+  max-width: 1920px;
+}
+
+@mixin reset-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin activeMobileBtn {
+  @include pseudo {
+    left: 50%;
+    top: 50%;
+    border-radius: 100%;
+    background: rgba(240, 240, 240, 0.1);
+    transform: translate(-50%, -50%);
+    width: calc(100% + 1em);
+    padding-bottom: calc(100% + 1em);
+  }
+}

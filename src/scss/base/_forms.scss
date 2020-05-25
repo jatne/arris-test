@@ -1,0 +1,86 @@
+.form {
+  &-input {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 1em 2em;
+    border-radius: 0;
+    background: transparent;
+    color: $color-black--light;
+    font-size: 1.2em;
+
+    @media screen and (min-width: 1024px) {
+      padding: 0.5em 2em;
+      font-size: 1em;
+    }
+  }
+}
+
+.search-bar {
+  --radius: 28px;
+
+  .form {
+    border: 2px solid $color-black--light;
+    border-radius: var(--radius);
+    display: flex;
+    width: 100%;
+    padding-left: 1em;
+    padding-right: 0;
+
+    .ico {
+      align-self: center;
+      flex-shrink: 0;
+    }
+
+    .form-input {
+      padding-left: 0.8em;
+      padding-right: 0.8em;
+      width: 100%;
+      transition: all 0.3s ease;
+      -webkit-appearance: none;
+
+      @media screen and (min-width: 1024px) {
+        width: 12em;
+      }
+
+      &:placeholder-shown {
+        @media screen and (min-width: 1024px) {
+          width: 7em;
+        }
+
+        & + .search-bar__submit {
+          @media screen and (min-width: $mobile-breakpoint) {
+            display: none;
+          }
+        }
+      }
+
+      &::placeholder {
+        font-weight: $font-weight-medium;
+        color: $color-black--light;
+      }
+
+      &:focus {
+        border: none;
+        outline: none;
+      }
+    }
+  }
+
+  .main-header__utilities & {
+    margin-left: 1em;
+  }
+
+  .search-bar__submit {
+    display: block;
+    justify-self: flex-end;
+  }
+
+  .main-header-mobile & {
+    display: none;
+
+    .open-search-form & {
+      display: block;
+    }
+  }
+}

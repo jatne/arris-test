@@ -1,0 +1,138 @@
+.btn {
+  user-select: none;
+  text-align: center;
+  cursor: pointer;
+  padding: 0.8em 8em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  background: var(--btn-bg, transparent);
+  transition: all 0.3s ease;
+  font-size: 0.9em;
+
+  &--primary {
+    --btn-bg: #{$color-black--light};
+    display: inline-block;
+    color: $color-white;
+
+    &:hover {
+      --btn-bg: #{lighten($color-black--light, 10%)};
+      color: $color-white;
+    }
+  }
+
+  &--out-line {
+    @include pseudo {
+      width: 60%;
+      height: 1px;
+      background: currentColor;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      line-height: 1;
+      transition: all 0.3s ease;
+    }
+
+    span {
+      position: relative;
+      display: inline-block;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+      background: var(--btn-bg);
+      transition: all 0.3s ease;
+    }
+
+    &:hover {
+      &::before {
+        width: 30%;
+      }
+    }
+  }
+
+  &--ghost {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  &__search {
+    @extend .btn--ghost;
+    @extend .ico;
+    @extend .ico-search;
+
+    .main-header-mobile & {
+      width: 25px;
+      height: 26px;
+      filter: brightness(0) invert(1);
+
+      .open-search-form & {
+        @include activeMobileBtn;
+      }
+    }
+  }
+}
+
+.burger {
+  @extend .btn--ghost;
+  width: 28px;
+  display: grid;
+  row-gap: 5px;
+
+  @media screen and (min-width: 1024px) {
+    width: 1.743em;
+  }
+
+  &__line {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: $color-black--light;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+
+    .open-nav &:last-of-type,
+    .active &:last-of-type {
+      opacity: 0;
+    }
+
+    .open-nav &:nth-child(1),
+    .active &:nth-child(1) {
+      transform: translateY(250%) rotate(45deg);
+    }
+
+    .open-nav &:nth-child(2),
+    .active &:nth-child(2) {
+      transform: rotate(-45deg);
+    }
+
+    .main-header-mobile & {
+      background: $color-white;
+    }
+  }
+
+  .open-nav & {
+    @include activeMobileBtn;
+  }
+}
+
+.search-bar__submit {
+  @extend .btn--ghost;
+  background: $color-gray;
+  border-top-right-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  padding-left: 1em;
+  padding-right: 1em;
+
+  &:hover {
+    background: lighten($color-gray, 5%);
+  }
+
+  span {
+    display: block;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDI4IDE4Ij48cGF0aCBkPSJNMjcuNjE5LDguMTQsMTkuMjg2LjM1NmExLjM2OCwxLjM2OCwwLDAsMC0xLjg0MSwwLDEuMTYsMS4xNiwwLDAsMCwwLDEuNzJsNi4xMSw1LjcwOEgxLjNhMS4yMTksMS4yMTksMCwxLDAsMCwyLjQzMkgyMy41NTVsLTYuMTEsNS43MDhhMS4xNiwxLjE2LDAsMCwwLDAsMS43MiwxLjM2OCwxLjM2OCwwLDAsMCwxLjg0MSwwTDI3LjYxOSw5Ljg2QTEuMTYsMS4xNiwwLDAsMCwyNy42MTksOC4xNFoiIGZpbGw9IiNmZmYiLz48L3N2Zz4=');
+    width: 28px;
+    height: 18px;
+    margin: 0 auto;
+  }
+}

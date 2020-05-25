@@ -1,13 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ARRIS - Zadanie testowe</title>
-  <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARRIS - Zadanie testowe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,900;1,900&family=Rubik:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/style.css?a=ayoasdasasddasdasdbasa342asdasdadad234234sdfsdfd" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="main-header__top-bar">
+        <div class="content content--full">
+          <div class="main-header__utilities">
+            <div class="menu-additional">
+              <div class="burger" data-mode="additional">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+              </div>
+              <div class="menu-additional__content">
+                <nav class="nav nav__additional">
+                  <ul>
+                    <li><a href="#">Führerscheinkontrolle</a></li>
+                    <li><a href="#">Flotte.de News Tool</a></li>
+                    <li><a href="#">ABO</a></li>
+                    <li><a href="#">Newsletter Anmeldung</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="search-bar">
+              <form method="GET" class="form">
+                <span class="ico ico-search"></span>
+                <input type="search" placeholder="Suche" class="form-input" />
+                <button type="submit" class="search-bar__submit"><span></span></button>
+              </form>
+            </div>
+          </div>
+          <div class="main-header__social">
+            <ul>
+              <li>
+                <a href="#" target="_blank" class="social social__fb"><span></span></a>
+              </li>
+              <li>
+                <a href="#" target="_blank" class="social social__tw"><span></span></a>
+              </li>
+              <li>
+                <a href="#" target="_blank" class="social social__gp"><span></span></a>
+              </li>
+              <li>
+                <a href="#" target="_blank" class="social social__yt"><span></span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- /.main-header__top-bar-->
 
-  <script src="./assets/js/app.js"></script>
-</body>
+      <div class="main-header__main">
+        <div class="main-header__start">
+          <div class="content content--boxed">
+            <div class="main-header-mobile">
+              <div class="main-header-mobile__bar">
+                <div class="main-header-mobile__logo-main">
+                  <div class="logos">
+                    <div class="logo logo__main logo--current">
+                      <a href="#">
+                        <img src="./assets/img/logo-flotte.png" alt="Flotte" width="264" height="57" />
+                      </a>
+                    </div>
+                    <div class="logo">
+                      <a href="#">
+                        <img src="./assets/img/logo-fm.png" alt="Flotte" width="264" height="87" />
+                      </a>
+                    </div>
+                    <div class="logo">
+                      <a href="#">
+                        <img src="./assets/img/logo-fdb.png" alt="Flotte" width="135" height="88" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-header-mobile__btns">
+                  <div class="main-header-mobile__search">
+                    <button type="button" class="btn__search" data-mode="mobile" data-target="search-form"><span></span></button>
+                  </div>
+                  <div class="main-header-mobile__burger">
+                    <div class="burger" data-mode="mobile" data-target="nav">
+                      <span class="burger__line"></span>
+                      <span class="burger__line"></span>
+                      <span class="burger__line"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="main-header-mobile__content">
+                <div class="main-header-mobile__body">
+                  <div class="search-bar">
+                    <form method="GET" class="form">
+                      <span class="ico ico-search"></span>
+                      <input type="search" placeholder="Suche" class="form-input" />
+                      <button type="submit" class="search-bar__submit"><span></span></button>
+                    </form>
+                  </div>
+                  <nav class="nav nav__main">
+                    <ul class="nav__main--primary">
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">Newsletter</a></li>
+                      <li><a href="#">Magazin</a></li>
+                      <li><a href="#">Flottenkompetenz</a></li>
+                      <li><a href="#">Autokatalog</a></li>
+                      <li><a href="#">Recht & Steuern</a></li>
+                      <li><a href="#">Praxis-Tools</a></li>
+                      <li><a href="#">Dienstreise</a></li>
+                      <li><a href="#">Jobs</a></li>
+                      <li><a href="#">Termine</a></li>
+                      <li><a href="#">Kontakte</a></li>
+                      <li><a href="#">Mediadaten</a></li>
+                    </ul>
+                    <ul class="nav__main--secondary">
+                      <li><a href="#">Führerscheinkontrolle</a></li>
+                      <li><a href="#">Flotte.de News Tool</a></li>
+                      <li><a href="#">ABO</a></li>
+                      <li><a href="#">Newsletter Anmeldung</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+
+              <div class="main-header-mobile__logos">
+                <div class="logos">
+                  <div class="logo">
+                    <a href="#">
+                      <img src="./assets/img/logo-fm.png" alt="Flotte" width="264" height="87" />
+                    </a>
+                  </div>
+                  <div class="logo">
+                    <a href="#">
+                      <img src="./assets/img/logo-fdb.png" alt="Flotte" width="135" height="88" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="main-header__logos">
+              <div class="logos">
+                <div class="logo logo__main logo--current">
+                  <a href="#">
+                    <img src="./assets/img/logo-flotte.png" alt="Flotte" width="264" height="57" />
+                  </a>
+                </div>
+                <div class="logo">
+                  <a href="#">
+                    <img src="./assets/img/logo-fm.png" alt="Flotte" width="264" height="87" />
+                  </a>
+                </div>
+                <div class="logo">
+                  <a href="#">
+                    <img src="./assets/img/logo-fdb.png" alt="Flotte" width="135" height="88" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="main-header__clock">
+              <div class="timer">
+                <div class="timer__bg"></div>
+                <div class="timer__title">
+                  <span class="timer__title--pre">die nächste</span>
+                  <span class="timer__title--main">Flotte! Der Branchentreff 2020</span>
+                </div>
+                <div class="timer__main">
+                  <div class="timer__section">
+                    <div id="timer-days" class="timer__value">0</div>
+                    <div class="timer__label">tage</div>
+                  </div>
+                  <div class="timer__section">
+                    <div id="timer-hours" class="timer__value">0</div>
+                    <div class="timer__label">stunden</div>
+                  </div>
+                  <div class="timer__section">
+                    <div id="timer-minutes" class="timer__value">0</div>
+                    <div class="timer__label">minuten</div>
+                  </div>
+                  <div class="timer__section">
+                    <div id="timer-seconds" class="timer__value">0</div>
+                    <div class="timer__label">sekunden</div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.timer -->
+            </div>
+          </div>
+        </div>
+
+        <div class="main-header__nav">
+          <div class="content content--boxed">
+            <div class="nav__arrows">
+              <div class="nav__arrow nav__arrow--left nav__arrow--not-active"><span></span></div>
+              <div class="nav__arrow nav__arrow--right nav__arrow--not-active"><span></span></div>
+            </div>
+            <nav class="nav nav__main">
+              <ul>
+                <li class="nav--current nav__home"><a href="#">Home</a></li>
+                <li><a href="#">Newsletter</a></li>
+                <li><a href="#">Magazin</a></li>
+                <li><a href="#">Flottenkompetenz</a></li>
+                <li><a href="#">Autokatalog</a></li>
+                <li><a href="#">Recht & Steuern</a></li>
+                <li><a href="#">Praxis-Tools</a></li>
+                <li><a href="#">Dienstreise</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Termine</a></li>
+                <li><a href="#">Kontakte</a></li>
+                <li><a href="#">Mediadaten</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /.main-header__nav-->
+      </div>
+      <!-- /.main-header__main-->
+
+      <div class="main-header__nav-sub">
+        <div class="content content--boxed">
+          <div class="nav nav__sub">
+            <ul>
+              <li><a href="#">Automobil</a></li>
+              <li><a href="#">Vermischtes</a></li>
+              <li><a href="#">Recht</a></li>
+              <li><a href="#">Management</a></li>
+              <li><a href="#">Leasing</a></li>
+              <li><a href="#">Innovation & Technik</a></li>
+              <li><a href="#">Personalien</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- /.main-header__nav-sub-->
+    </header>
+
+    <div class="body">
+      <div class="content content--boxed">
+        <main class="main-content">
+          <div class="slider__latest-news">
+            <div class="latest-news-nav">
+              <div class="latest-news-nav__item latest-news-nav__item--active" data-slide="0">
+                <h4><span>Mitsubishi Pick-up</span></h4>
+                <p>Den Pick-up gibt es schon seit 40 Jahren bei Mitsubishi.</p>
+              </div>
+              <div class="latest-news-nav__item" data-slide="1">
+                <h4><span>Toyota RAV4</span></h4>
+                <p>Das Segment der SUV ist ein Haifischbecken, in dem man...</p>
+              </div>
+              <div class="latest-news-nav__item" data-slide="2">
+                <h4><span>Renault Nutzfahrzeuge</span></h4>
+                <p>Renault erweitert Nutzfahrzeuge-Angebot auf…</p>
+              </div>
+              <div class="latest-news-nav__item" data-slide="3">
+                <h4><span>C5 Aircross</span></h4>
+                <p>Das neue Vorzeigemodell von Citroën, der C5 Aircross, steht...</p>
+              </div>
+            </div>
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a class="latest-news-slide" href="#" style="background-image: url('assets/img/slider-1.jpg');">
+                    <div class="latest-news-slide__content">
+                      <h2>Japanisches Arbeitstier</h2>
+                      <p>Den Pick-up gibt es schon seit 40 Jahren bei Mitsubishi. Nun erhält der L200 eine neue Auflage...</p>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a class="latest-news-slide" href="#" style="background-image: url('assets/img/slider-1.jpg');">
+                    <div class="latest-news-slide__content">
+                      <h2>Toyota RAV4</h2>
+                      <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a class="latest-news-slide" href="#" style="background-image: url('assets/img/slider-1.jpg');">
+                    <div class="latest-news-slide__content">
+                      <h2>Xonsectetur adipisicing.</h2>
+                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste ex in optio dolores.</p>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a class="latest-news-slide" href="#" style="background-image: url('assets/img/slider-1.jpg');">
+                    <div class="latest-news-slide__content">
+                      <h2>Uadipisicing elit</h2>
+                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam rem excepturi modi sit eum!</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+        </main>
+
+        <aside class="main-aside">
+          <div class="magazine">
+            <div class="magazine__header">
+              <div class="magazine__edition">
+                <div class="magazine__number"><span>6</span></div>
+                <div class="magazine__label">
+                  <span>Magazin<br />2018</span>
+                </div>
+              </div>
+            </div>
+            <div class="magazine__content">
+              <div class="magazine__cover">
+                <a href="#">
+                  <img src="assets/img/magazine-cover.jpg" width="330" height="462" alt="Flotten management 6/2018" />
+                </a>
+              </div>
+              <div class="magazine__headlines">
+                <ul>
+                  <li><a href="#">Alle Themen als&nbsp;Überblick</a></li>
+                  <li><a href="#">Komplettes Magazin als&nbsp;E-Paper</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="box__header box__header--center box__header--small">
+              <h2><span>Am Haufstigsten Gelesen</span></h2>
+            </div>
+            <div class="box__content">
+              <div class="articles-list">
+                <a href="#" class="article-excerpt">
+                  <div class="article-excerpt__figure">
+                    <img src="assets/img/article-temp.jpg" width="176" height="152" alt="Article title" />
+                  </div>
+                  <div class="article-excerpt__content">
+                    <div class="article-excerpt__title">
+                      <h3>Muster einer Car Policy</h3>
+                    </div>
+                    <div class="article-excerpt__desc">
+                      <p>Der Firma YX (genaue Bezeichnung und Zusatz z.B. laut Handelsregister GmbH, AG , usw).</p>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="#" class="article-excerpt">
+                  <div class="article-excerpt__figure">
+                    <img src="assets/img/article-temp-2.jpg" width="176" height="152" alt="Article title" />
+                  </div>
+                  <div class="article-excerpt__content">
+                    <div class="article-excerpt__title">
+                      <h3>Macht Zucker im Tank den Motor kaputt?</h3>
+                    </div>
+                    <div class="article-excerpt__desc">
+                      <p>Zucker im Tank setzt ein Auto sofort außer Betrieb – heißt es. Das stimmt aber nicht so ganz.</p>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="#" class="article-excerpt">
+                  <div class="article-excerpt__figure">
+                    <img src="assets/img/article-temp-3.jpg" width="176" height="152" alt="Article title" />
+                  </div>
+                  <div class="article-excerpt__content">
+                    <div class="article-excerpt__title">
+                      <h3>Falschparker auf dem Firmenparkplatz</h3>
+                    </div>
+                    <div class="article-excerpt__desc">
+                      <p>Abschleppen, abmahnen oder abhaken? Wer kennt diese Situation nicht? Ein Mitarbeiter fährt zu...</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="box__footer">
+              <a href="#" class="btn btn--primary btn--out-line"><span>Mehr</span></a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <script defer src="./assets/js/vendor.js"></script>
+    <script defer src="./assets/js/app.js?aasdasds=asd2344asdasddsfsdf23423as"></script>
+  </body>
 </html>

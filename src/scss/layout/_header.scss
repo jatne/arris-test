@@ -1,0 +1,187 @@
+.main-header {
+  @media screen and (min-width: $mobile-breakpoint) {
+    margin-bottom: 2em;
+  }
+
+  &__top-bar {
+    display: none;
+
+    @media screen and (min-width: $mobile-breakpoint) {
+      display: block;
+      position: relative;
+      z-index: 4;
+      padding-top: 0.3em;
+      padding-bottom: 0.3em;
+    }
+
+    .content {
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__utilities {
+    @include flex(false, false, center);
+    position: relative;
+    width: auto;
+  }
+
+  &__main {
+    padding-top: 1em;
+    padding-bottom: 0;
+    background: $color-black--light;
+    color: $color-white;
+
+    @media screen and (min-width: 1280px) {
+      padding-top: 2em;
+    }
+  }
+
+  &__social {
+    display: none;
+
+    @media screen and (min-width: $mobile-breakpoint) {
+      display: block;
+    }
+
+    ul {
+      @include reset-list;
+      @include flex(false, false, center);
+    }
+    li {
+      padding: 0.2em;
+    }
+  }
+
+  &__start {
+    --gap-col: 2em;
+    padding-bottom: 2em;
+
+    .content {
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    @media screen and (min-width: $mobile-breakpoint) {
+      display: block;
+    }
+
+    &-sub {
+      display: none;
+
+      @media screen and (min-width: $mobile-breakpoint) {
+        display: block;
+        position: relative;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        background: $color-white;
+        box-shadow: 0 2px 8px rgba($color-black, 0.3);
+      }
+
+      @media screen and (min-width: 1280px) {
+        padding-top: 0.7em;
+        padding-bottom: 0.7em;
+      }
+    }
+  }
+
+  &__clock {
+    display: block;
+    margin: 0 auto;
+
+    @media screen and (min-width: $mobile-breakpoint) {
+      margin: 0;
+    }
+  }
+
+  &-mobile {
+    width: 100%;
+    padding-bottom: 2em;
+
+    @media screen and (min-width: $mobile-breakpoint) {
+      display: none;
+    }
+
+    &__bar {
+      @include grid;
+      grid-template-columns: 1fr 100px;
+      column-gap: var(--gap-col);
+      padding-bottom: 2em;
+    }
+
+    &__btns {
+      @include grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &__search,
+    &__burger {
+      @include flex(false, false, center);
+    }
+
+    &__search {
+      justify-content: center;
+    }
+
+    &__burger {
+      justify-content: flex-end;
+    }
+
+    &__body {
+      padding: 2em 1em;
+    }
+
+    &__logos {
+      @media screen and (min-width: 576px) {
+        display: none;
+      }
+    }
+
+    &__logo-main {
+      .logo:not(.logo__main) {
+        display: none;
+        @media screen and (min-width: 576px) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__logos {
+    display: none;
+    position: relative;
+    z-index: 3;
+
+    @media screen and (min-width: $mobile-breakpoint) {
+      display: block;
+    }
+  }
+
+  &-mobile__content {
+    position: fixed;
+    z-index: 9999;
+    background: var(--bg, transparent);
+    width: 100%;
+    left: 0;
+    overflow-y: auto;
+    height: 100vh;
+    max-height: 0;
+    transition: all 0.3s ease;
+
+    .open & {
+      max-height: calc(100% - 78px);
+    }
+
+    .open-nav & {
+      --bg: #{$color-red--darker};
+    }
+
+    .open-search-form & {
+      --bg: #{$color-white};
+    }
+  }
+}

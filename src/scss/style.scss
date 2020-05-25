@@ -1,1 +1,13 @@
+@import 'base/config';
+@import 'base/mixins';
 @import 'vendor/swiper/swiper';
+@import 'base/reset';
+@import 'base/typo';
+@import 'base/forms';
+@import 'base/buttons';
+@import 'base/ico';
+
+@import 'layout/content';
+@import 'layout/header';
+@import 'layout/components';
+@import 'layout/nav';
