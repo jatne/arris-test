@@ -15,7 +15,8 @@ const paths = {
     dest: './dist/assets/css/',
   },
   js: {
-    src: './src/js/app.js',
+    app: './src/js/app.js',
+    vendor: './src/js/vendor/**/*.js',
     dest: './dist/assets/js/',
   },
 };
@@ -30,24 +31,33 @@ const style = () =>
     .pipe(gulp.dest(paths.scss.dest));
 
 
-const js = () =>
+const jsApp = () =>
   gulp
-    .src(paths.js.src)
+    .src(paths.js.app)
     .pipe(plumber({ errorHandler: onError }))
     .pipe(babel())
     .pipe(minifyJS())
     .pipe(gulp.dest(paths.js.dest));
 
-
+const jsVendor = () =>
+gulp
+  .src(paths.js.vendor)
+  .pipe(concat('vendor.js'))
+  .pipe(plumber({ errorHandler: onError }))
+  .pipe(babel())
+  .pipe(minifyJS())
+  .pipe(gulp.dest(paths.js.dest));
 
 const watcher = () => {
   gulp.watch('./src/scss/**/*.scss', style);
-  gulp.watch(paths.js.src, js);
+  gulp.watch(paths.js.app, jsApp);
+  gulp.watch(paths.js.vendor, jsVendor);
 };
 
 const styleWatcher = gulp.series(
   style,
-  js,
+  jsApp,
+  jsVendor,
   watcher
 );
 
