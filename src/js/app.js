@@ -25,3 +25,27 @@ if ( document.querySelector('.slider__latest-news') ) {
 
   sliderLastestNewsItems.forEach(item => item.addEventListener('click', goToSlide));
 }
+
+if ( document.querySelector('.timer') ) {
+  const releaseDate = new Date('2020-12-31T23:59:59').getTime();
+
+  const interval = setInterval(() => {
+    const now = new Date().getTime();
+    const diff = releaseDate - now;
+    const time = {
+      days: diff > 0 ? Math.floor(diff / ( 1000 * 60 * 60 * 24 )) : 0,
+      hours: diff > 0 ? Math.floor((diff%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)) : 0,
+      minutes: diff > 0 ?  Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)) : 0,
+      seconds: diff > 0 ?  Math.floor((diff % (1000 * 60)) / 1000) : 0,
+    }
+
+    document.getElementById('timer-days').innerHTML = time.days;
+    document.getElementById('timer-hours').innerHTML = time.hours;
+    document.getElementById('timer-minutes').innerHTML = time.minutes;
+    document.getElementById('timer-seconds').innerHTML = time.seconds;
+
+    if ( diff < 0 ) {
+      clearInterval(interval);
+    }
+  }, 1000);
+}
